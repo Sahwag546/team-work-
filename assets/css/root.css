@@ -18,3 +18,16 @@
     --fc-gray:#81848A;
     --fc-white:#fff;
 }
+
+@media (max-width:992px) {
+    :root{
+        --fs-sm:10px;
+        --fs-md:12px;
+        --fs-lg:14px;
+        --fs-xl:16px;
+        --fs-2xl:18px;
+        --fs-3xl:22px;
+        --fs-4xl:48px;
+        --fs-5xl:58px;
+    }
+}
