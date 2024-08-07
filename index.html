@@ -5,17 +5,495 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+        integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/root.css">
 </head>
+
 <body>
-    <section class=" min-vh-100 align-content-center">
+    <section class="background-img layer  position-relative  d-flex justify-content-center flex-column layer">
+        <header class=" p-3  w-100 z-2">
+            <div class="container  w-100 ">
+                <nav class="d-flex  justify-content-between  back align-items-center justify-content-center ">
+                    <div class="logo">
+                        <img class="cursor" src="./assets/image/logo-img.png" alt="img">
+                    </div>
+                    <input class="check" type="checkbox" hidden id="menu">
+                    <label class="overflow-hidden" for="menu">
+                        <span class="check"></span>
+                        <span class="check"></span>
+                        <span class="check"></span>
+                    </label>
+                    <ul
+                        class="d-flex align-itemes-center p-0 m-0  nav-links gap-4 list-unstyled  justify-content-center align-items-center">
+                        <li><a class="nav-link" href="/">Home</a></li>
+                        <li><a class="nav-link" href="/">About</a></li>
+                        <li><a class="nav-link" href="/">Services</a></li>
+                        <li><a class="nav-link" href="/">Portfolio</a></li>
+                        <li><a class="nav-link" href="/">Contact us</a></li>
+                        <li><a class="nav-link" href="/">Request a Qoute</a></li>
+                        <li><a href="tel:" target="_blank"><button class="nav-btn"><svg class="svg-1" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M11.05 14.95L9.2 16.8C8.81 17.19 8.19 17.19 7.79 16.81C7.68 16.7 7.57 16.6 7.46 16.49C6.43 15.45 5.5 14.36 4.67 13.22C3.85 12.08 3.19 10.94 2.71 9.81C2.24 8.67 2 7.58 2 6.54C2 5.86 2.12 5.21 2.36 4.61C2.6 4 2.98 3.44 3.51 2.94C4.15 2.31 4.85 2 5.59 2C5.87 2 6.15 2.06 6.4 2.18C6.66 2.3 6.89 2.48 7.07 2.74L9.39 6.01C9.57 6.26 9.7 6.49 9.79 6.71C9.88 6.92 9.93 7.13 9.93 7.32C9.93 7.56 9.86 7.8 9.72 8.03C9.59 8.26 9.4 8.5 9.16 8.74L8.4 9.53C8.29 9.64 8.24 9.77 8.24 9.93C8.24 10.01 8.25 10.08 8.27 10.16C8.3 10.24 8.33 10.3 8.35 10.36C8.53 10.69 8.84 11.12 9.28 11.64C9.73 12.16 10.21 12.69 10.73 13.22C10.83 13.32 10.94 13.42 11.04 13.52C11.44 13.91 11.45 14.55 11.05 14.95Z"
+                                            fill="white" />
+                                        <path
+                                            d="M21.9696 18.33C21.9696 18.61 21.9196 18.9 21.8196 19.18C21.7896 19.26 21.7596 19.34 21.7196 19.42C21.5496 19.78 21.3296 20.12 21.0396 20.44C20.5496 20.98 20.0096 21.37 19.3996 21.62C19.3896 21.62 19.3796 21.63 19.3696 21.63C18.7796 21.87 18.1396 22 17.4496 22C16.4296 22 15.3396 21.76 14.1896 21.27C13.0396 20.78 11.8896 20.12 10.7496 19.29C10.3596 19 9.96961 18.71 9.59961 18.4L12.8696 15.13C13.1496 15.34 13.3996 15.5 13.6096 15.61C13.6596 15.63 13.7196 15.66 13.7896 15.69C13.8696 15.72 13.9496 15.73 14.0396 15.73C14.2096 15.73 14.3396 15.67 14.4496 15.56L15.2096 14.81C15.4596 14.56 15.6996 14.37 15.9296 14.25C16.1596 14.11 16.3896 14.04 16.6396 14.04C16.8296 14.04 17.0296 14.08 17.2496 14.17C17.4696 14.26 17.6996 14.39 17.9496 14.56L21.2596 16.91C21.5196 17.09 21.6996 17.3 21.8096 17.55C21.9096 17.8 21.9696 18.05 21.9696 18.33Z"
+                                            fill="white" />
+                                    </svg>
+                                    (865) 621-1717</button></a> </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="flex-grow-1 justify-content-center align-items-center z-1 d-flex">
+            <div class="container">
+                <div class="heading">
+                    <h2 class="main-head pt-72">Transform Your Space with Precision and Quality:</h2>
+                    <h2 class="main-head"> Get a Free Quote Today!</h2>
+                </div>
+                <p class="para-1 pt-3">Lörem ipsum koda astrobel: sutaveligen. Rodod bänera viliga. Pregigt primasofi
+                    dede
+                    facebooka: förutom tivaligt. Fejkade nyheter eurosamma sol: teroktig,</p>
+                <button class="hero-btn mb-5">Get a Quote</button>
+                <div class="d-flex gap-5 flex-column flex-lg-row text-center mb-5">
+                    <div class="d-flex gap-5 flex-column flex-sm-row text-center">
+                        <div class="box d-flex align-items-center gap-3 mt-5 ">
+                            <div class="icon"><a href="https://www.google.com/" target="_blank"><img src="./assets/image/svg/google-pic.svg" alt=""></a>
+                            </div>
+                            <div class="text">
+                                <p class="m-0 review">Google Review</p>
+                                <div class="d-flex ">
+                                    <p class="m-0 review">4.6</p>
+                                    <img src="./assets/image/svg/5-star-pic.svg" alt="">
+                                </div>
+                                <p class="m-0 review">Based on 145 reviews</p>
+                            </div>
+                        </div>
+                        <div class="box d-flex align-items-center gap-3 mt-5 ">
+                            <div class="icon">
+                                <img src="/assets/image/svg/star-pic.svg" alt="">
+                            </div>
+                            <div class="text">
+                                <p class="m-0 review text-start">Google Review</p>
+                                <div class="d-flex">
+                                    <p class="m-0 review">4.6</p>
+                                           <img src="./assets/image/svg/5-star-pic.svg" alt="">
+                                </div>
+                                <p class="m-0 review">Based on 145 reviews</p>
+                            </div>
+                            <div class="d-flex">
+                                <div>
+                                    <div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="d-flex mt-sm-5 gap-5 mb-1">
+                        <div>
+                            <img class="w-100 mb-3 cursor" src="./assets/image/image-8.png" alt="img">
+                        </div>
+                        <div>
+                            <img class="w-100 mb-3 cursor" src="./assets/image/image-7.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="align-items-center  d-flex     ">
         <div class="container">
+            <h2 class="heading-3 text-center ">What we do</h2>
+            <div class="row row-gap-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card p-4 ">
+                        <div class="overflow-hidden">
+                            <img class="w-100 card-img" src="./assets/image/card-img-1.png" alt="img">
+                        </div>
+                        <p class="card-text pt-4">Kitchen Backsplash</p>
+                        <p class="card-text-2">Lörem ipsum koda astrobel: sutaveligen. Rodod bänera viliga. </p>
+                        <p class="learn-more">Learn more <svg width="26" height="12" viewBox="0 0 26 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M1 5.25C0.585786 5.25 0.25 5.58579 0.25 6C0.25 6.41421 0.585786 6.75 1 6.75V5.25ZM25.5303 6.53033C25.8232 6.23744 25.8232 5.76256 25.5303 5.46967L20.7574 0.696699C20.4645 0.403806 19.9896 0.403806 19.6967 0.696699C19.4038 0.989593 19.4038 1.46447 19.6967 1.75736L23.9393 6L19.6967 10.2426C19.4038 10.5355 19.4038 11.0104 19.6967 11.3033C19.9896 11.5962 20.4645 11.5962 20.7574 11.3033L25.5303 6.53033ZM1 6.75H25V5.25H1V6.75Z"
+                                    fill="#FF0000" />
+                            </svg>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card p-4 ">
+                        <div class="overflow-hidden">
+                            <img class="w-100 card-img" src="./assets/image/card-img-2.png" alt="img">
+                        </div>
+                        <p class="card-text pt-4"> Custom Showers</p>
+                        <p class="card-text-2">Lörem ipsum koda astrobel: sutaveligen. Rodod bänera viliga. </p>
+                        <p class="learn-more">Learn more <svg width="26" height="12" viewBox="0 0 26 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M1 5.25C0.585786 5.25 0.25 5.58579 0.25 6C0.25 6.41421 0.585786 6.75 1 6.75V5.25ZM25.5303 6.53033C25.8232 6.23744 25.8232 5.76256 25.5303 5.46967L20.7574 0.696699C20.4645 0.403806 19.9896 0.403806 19.6967 0.696699C19.4038 0.989593 19.4038 1.46447 19.6967 1.75736L23.9393 6L19.6967 10.2426C19.4038 10.5355 19.4038 11.0104 19.6967 11.3033C19.9896 11.5962 20.4645 11.5962 20.7574 11.3033L25.5303 6.53033ZM1 6.75H25V5.25H1V6.75Z"
+                                    fill="#FF0000" />
+                            </svg>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card p-4 ">
+                        <div class="overflow-hidden">
+                            <img class="w-100 card-img" src="./assets/image/card-img-3.png" alt="img">
+                        </div>
+                        <p class="card-text pt-4"> Custom Flooring</p>
+                        <p class="card-text-2">Lörem ipsum koda astrobel: sutaveligen. Rodod bänera viliga. </p>
+                        <p class="learn-more">Learn more <svg width="26" height="12" viewBox="0 0 26 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M1 5.25C0.585786 5.25 0.25 5.58579 0.25 6C0.25 6.41421 0.585786 6.75 1 6.75V5.25ZM25.5303 6.53033C25.8232 6.23744 25.8232 5.76256 25.5303 5.46967L20.7574 0.696699C20.4645 0.403806 19.9896 0.403806 19.6967 0.696699C19.4038 0.989593 19.4038 1.46447 19.6967 1.75736L23.9393 6L19.6967 10.2426C19.4038 10.5355 19.4038 11.0104 19.6967 11.3033C19.9896 11.5962 20.4645 11.5962 20.7574 11.3033L25.5303 6.53033ZM1 6.75H25V5.25H1V6.75Z"
+                                    fill="#FF0000" />
+                            </svg>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card p-4 ">
+                        <div class="overflow-hidden">
+                            <img class="w-100 card-img" src="./assets/image/card-img-4.png" alt="img">
+                        </div>
+                        <p class="card-text pt-4"> Large Format Tiling</p>
+                        <p class="card-text-2">Lörem ipsum koda astrobel: sutaveligen. Rodod bänera viliga. </p>
+                        <p class="learn-more">Learn more <svg width="26" height="12" viewBox="0 0 26 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M1 5.25C0.585786 5.25 0.25 5.58579 0.25 6C0.25 6.41421 0.585786 6.75 1 6.75V5.25ZM25.5303 6.53033C25.8232 6.23744 25.8232 5.76256 25.5303 5.46967L20.7574 0.696699C20.4645 0.403806 19.9896 0.403806 19.6967 0.696699C19.4038 0.989593 19.4038 1.46447 19.6967 1.75736L23.9393 6L19.6967 10.2426C19.4038 10.5355 19.4038 11.0104 19.6967 11.3033C19.9896 11.5962 20.4645 11.5962 20.7574 11.3033L25.5303 6.53033ZM1 6.75H25V5.25H1V6.75Z"
+                                    fill="#FF0000" />
+                            </svg>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card p-4 ">
+                        <div class="overflow-hidden">
+                            <img class="w-100 card-img" src="./assets/image/card-img-5.png" alt="img">
+                        </div>
+                        <p class="card-text pt-4">Wall Tiling </p>
+                        <p class="card-text-2">Lörem ipsum koda astrobel: sutaveligen. Rodod bänera viliga. </p>
+                        <p class="learn-more">Learn more <svg width="26" height="12" viewBox="0 0 26 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M1 5.25C0.585786 5.25 0.25 5.58579 0.25 6C0.25 6.41421 0.585786 6.75 1 6.75V5.25ZM25.5303 6.53033C25.8232 6.23744 25.8232 5.76256 25.5303 5.46967L20.7574 0.696699C20.4645 0.403806 19.9896 0.403806 19.6967 0.696699C19.4038 0.989593 19.4038 1.46447 19.6967 1.75736L23.9393 6L19.6967 10.2426C19.4038 10.5355 19.4038 11.0104 19.6967 11.3033C19.9896 11.5962 20.4645 11.5962 20.7574 11.3033L25.5303 6.53033ZM1 6.75H25V5.25H1V6.75Z"
+                                    fill="#FF0000" />
+                            </svg>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4  ">
+                    <div class="card p-4 ">
+                        <div class="overflow-hidden">
+                            <img class="w-100 card-img" src="./assets/image/card-img-6.png" alt="img">
+                        </div>
+                        <p class="card-text pt-4">ADA Compliant Showers</p>
+                        <p class="card-text-2">Lörem ipsum koda astrobel: sutaveligen. Rodod bänera viliga. </p>
+                        <p class="learn-more">Learn more <svg width="26" height="12" viewBox="0 0 26 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M1 5.25C0.585786 5.25 0.25 5.58579 0.25 6C0.25 6.41421 0.585786 6.75 1 6.75V5.25ZM25.5303 6.53033C25.8232 6.23744 25.8232 5.76256 25.5303 5.46967L20.7574 0.696699C20.4645 0.403806 19.9896 0.403806 19.6967 0.696699C19.4038 0.989593 19.4038 1.46447 19.6967 1.75736L23.9393 6L19.6967 10.2426C19.4038 10.5355 19.4038 11.0104 19.6967 11.3033C19.9896 11.5962 20.4645 11.5962 20.7574 11.3033L25.5303 6.53033ZM1 6.75H25V5.25H1V6.75Z"
+                                    fill="#FF0000" />
+                            </svg>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 pb-5">
+                    <div class="card p-4 ">
+                        <div class="overflow-hidden">
+                            <img class="w-100 card-img" src="./assets/image/card-img-5.png" alt="img">
+                        </div>
+                        <p class="card-text pt-4">Fireplace Tiling</p>
+                        <p class="card-text-2">Lörem ipsum koda astrobel: sutaveligen. Rodod bänera viliga. </p>
+                        <p class="learn-more">Learn more <svg width="26" height="12" viewBox="0 0 26 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M1 5.25C0.585786 5.25 0.25 5.58579 0.25 6C0.25 6.41421 0.585786 6.75 1 6.75V5.25ZM25.5303 6.53033C25.8232 6.23744 25.8232 5.76256 25.5303 5.46967L20.7574 0.696699C20.4645 0.403806 19.9896 0.403806 19.6967 0.696699C19.4038 0.989593 19.4038 1.46447 19.6967 1.75736L23.9393 6L19.6967 10.2426C19.4038 10.5355 19.4038 11.0104 19.6967 11.3033C19.9896 11.5962 20.4645 11.5962 20.7574 11.3033L25.5303 6.53033ZM1 6.75H25V5.25H1V6.75Z"
+                                    fill="#FF0000" />
+                            </svg>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="  bg-color align-items-center d-flex">
+        <div class="container">
+            <div class="row row-gap-4">
+                <div class=" col-12 col-lg-6">
+                    <h2 class="heading-3 text-start">Why Choose us?</h2>
+
+                    <p class="para-2 color text-start">Lörem ipsum koda astrobel: sutaveligen. Rodod bänera viliga.
+                        Pregigt primasofi dede facebooka: förutom tivaligt. </p>
+                    <div class="">
+                        <div class="d-flex gap-3 cursor flex-column flex-md-row">
+                            <div class="icon-1 align-items-center justify-content-center d-flex mb-5">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.15"
+                                        d="M16 22.6667L8 26.6667L10 18.6667L4 12L12.6667 11.3333L16 4L19.3333 11.3333L28 12L22 18.6667L24 26.6667L16 22.6667Z"
+                                        fill="#FF0000" />
+                                    <path
+                                        d="M16 22.6667L8 26.6667L10 18.6667L4 12L12.6667 11.3333L16 4L19.3333 11.3333L28 12L22 18.6667L24 26.6667L16 22.6667Z"
+                                        stroke="#FF0000" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="box-2">
+                                <p class="para-2">High Quality Materials</p>
+                                <p class="para-3">Es ist ein lang erwiesener Fakt, dass ein Leser vom Text abgelenkt
+                                    wird.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-3  cursor flex-column flex-md-row">
+                            <div class="icon-1 align-items-center justify-content-center d-flex">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.15" fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M10.666 13.3336V26.667H23.1465C24.4177 26.667 25.5121 25.7697 25.7614 24.5233L27.3614 16.5233C27.6914 14.8732 26.4293 13.3336 24.7465 13.3336H18.666L21.9004 8.48212C22.9233 6.94775 22.1173 4.86313 20.3283 4.41588L20.2649 4.40002C19.285 4.15505 18.2508 4.48473 17.5935 5.25162L10.666 13.3336Z"
+                                        fill="#FF0000" />
+                                    <path
+                                        d="M10.6673 13.3337V26.667M10.6673 13.3337L5.33398 13.3336V26.667L10.6673 26.667M10.6673 13.3337L17.5948 5.25162C18.2521 4.48473 19.2863 4.15505 20.2662 4.40002L20.3296 4.41588C22.1186 4.86313 22.9246 6.94775 21.9017 8.48212L18.6673 13.3336H24.7478C26.4306 13.3336 27.6927 14.8732 27.3627 16.5233L25.7627 24.5233C25.5134 25.7697 24.419 26.667 23.1478 26.667L10.6673 26.667"
+                                        stroke="#FF0000" stroke-width="2.0625" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="para-2">Durability with Warranty</p>
+                                <p class="para-3">Es ist ein lang erwiesener Fakt, dass ein Leser vom Text abgelenkt
+                                    wird.</p>
+                            </div>
+                            <div class="d-flex gap-3 "></div>
+                        </div>
+                        <div class="d-flex gap-3 mb-5 cursor flex-column flex-md-row">
+                            <div class="icon-1 align-items-center justify-content-center d-flex">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.15"
+                                        d="M27.9992 21.9689V25.5819C28.0048 26.9631 26.7629 28.1164 25.3685 27.9906C13.3333 28 4 18.58 4.00942 6.62558C3.88383 5.2386 5.03143 4.00141 6.41081 4.00012H10.031C10.6166 3.99436 11.1844 4.20134 11.6284 4.58246C12.8908 5.66599 13.7028 9.3437 13.3904 10.8057C13.1465 11.9472 11.9959 12.7457 11.2136 13.5265C12.9314 16.5416 15.4329 19.0381 18.454 20.7525C19.2362 19.9718 20.0364 18.8234 21.1801 18.58C22.6473 18.2677 26.3486 19.0809 27.4278 20.3521C27.8105 20.8028 28.0139 21.3783 27.9992 21.9689Z"
+                                        fill="#FF0000" />
+                                    <path
+                                        d="M19.3333 8.66667C20.3162 8.85843 21.2919 9.2919 22 10C22.7081 10.7081 23.1416 11.6838 23.3333 12.6667M20 4C22.042 4.22685 23.8796 5.21476 25.3333 6.66667C26.7871 8.11857 27.7706 9.95825 28 12M27.9992 21.9689V25.5819C28.0048 26.963 26.7629 28.1164 25.3685 27.9906C13.3333 28 4 18.58 4.00942 6.62558C3.88383 5.2386 5.03143 4.00141 6.41081 4.00012H10.031C10.6166 3.99436 11.1844 4.20134 11.6284 4.58246C12.8908 5.66599 13.7028 9.3437 13.3904 10.8057C13.1465 11.9472 11.9959 12.7457 11.2136 13.5265C12.9314 16.5416 15.4329 19.0381 18.454 20.7525C19.2362 19.9718 20.0364 18.8234 21.1801 18.58C22.6473 18.2677 26.3486 19.0809 27.4278 20.3521C27.8105 20.8028 28.0139 21.3783 27.9992 21.9689Z"
+                                        stroke="#FF0000" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="para-2">24/7 Support</p>
+                                <p class="para-3">Es ist ein lang erwiesener Fakt, dass ein Leser vom Text abgelenkt
+                                    wird.</p>
+                            </div>
+                        </div>
+                        <button class="hero-btn mb-5">Get a Quote</button>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 ">
+                    <div class=" position-relative pt-100 mb-93 w-75 ">
+                        <div class=" text-center align-items-center d-flex position-relative z-3 ">
+                            <img class=" w-100" src="./assets/image/section-3-img.png" alt="img">
+                        </div>
+                        <div>
+                            <img class="position-absolute red-img w-75" src="./assets/image/red-img.png" alt="img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class=" overflow-hidden pt-5">
+        <div class="container w-1140">
+            <div class=" d-flex justify-content-center">
+                <div class="max-width-674 mb-32">
+                    <h3 class="text-center fs-56 fw-semibold color-black">What Our Customers Say</h3>
+                    <p class="text-center fs-18 fw-normal color-black">Lörem ipsum koda astrobel: sutaveligen. Rodod
+                        bänera viliga.
+                        Pregigt
+                        primasofi dede
+                        facebooka: förutom
+                        tivaligt. Fejkade</p>
+                </div>
+            </div>
+            <div class="d-flex gap-4 flex-wrap justify-content-center manrope">
+                <div class=" d-flex align-items-center gap-2  py-2 ps-3 pe-5 rounded-3 media-card-2 cursor transition-300ms">
+                    <div>
+                        <img src="./assets/image/svg/google-pic.svg" alt="google-icon">
+                    </div>
+                    <div>
+                        <p class="mb-0 fs-12 fw-normal">Google Review</p>
+                        <div class=" gap-2 align-items-center">
+                            <div class=" d-flex gap-1 align-items-center">
+                                <p class="mb-0 fs-20 fw-normal">4.5</p>
+                                <img class="" src="./assets/image/svg/5-star-pic.svg" alt="five-star">
+                            </div>
+                            <p class="mb-0 fs-12 fw-normal">Based on 145 reviews</p>
+                        </div>
+                    </div>
+                </div>
+                <div class=" d-flex align-items-center gap-2  py-2 ps-3 pe-5 rounded-3 media-card-2 cursor transition-300ms">
+                    <div>
+                        <img src="./assets/image/svg/star-pic.svg" alt="google-icon">
+                    </div>
+                    <div>
+                        <p class="mb-0 fs-12 fw-normal">Google Review</p>
+                        <div class=" gap-2 align-items-center">
+                            <div class=" d-flex gap-1 align-items-center">
+                                <p class="mb-0 fs-20 fw-normal">4.5</p>
+                                <img class="" src="./assets/image/svg/5-star-pic.svg" alt="five-star">
+                            </div>
+                            <p class="mb-0 fs-12 fw-normal">Based on 145 reviews</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!------Slider-->
+            <div class="mt-60  pb-5 manrope d-flex justify-content-center">
+                <div class="container " id="features">
+                    <div class="sliderbox z-5 d-flex gap-30 align-items-center">
+                        <div class="slider-box mx-4 ">
+                            <div class="d-flex  flex-column">
+                                <div class="d-flex ">
+                                    <div class="slider-image">
+                                        <img src="./assets/image/slider-1.png" alt="image">
+                                    </div>
+                                    <div class="para-1 pl-20">
+                                        <h2 class="slick-box-heading color-black fs-16 fw-semibold mb-0 color ">Mark T.</h2>
+                                        <p class="slick-box-text mb-0 fs-14 fw-normal color-black color ">Fitness enthusiast
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="para-2 d-flex   gap-2">
+                                    <img class="w-50" src="./assets/image/svg/5-star-pic.svg" alt="//">
+                                </div>
+                            </div>
+                            <p class="slick-para-3 mb-0 fs-16 fw-normal color-black ">"As a fitness enthusiast, I was
+                                skeptical about
+                                resistance bands at first. But after trying these, I'm a believer. The quality is
+                                top-notch, and they've
+                                become an integral part of my workout routine. I can't believe how versatile they are.”
+                            </p>
+                        </div>
+                        <div class="slider-box mx-4 ">
+                            <div class="d-flex  flex-column">
+                                <div class="d-flex ">
+                                    <div class="slider-image">
+                                        <img src="./assets/image/slider-2pic.png" alt="image">
+                                    </div>
+                                    <div class="para-1 pl-20">
+                                        <h2 class="slick-box-heading ccolor-black fs-16 fw-semibold mb-0 color ">Mark T.</h2>
+                                        <p class="slick-box-text mb-0 fs-14 fw-normal color-black color ">Fitness enthusiast
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="para-2 d-flex   gap-2">
+                                    <img class="w-50" src="./assets/image/svg/5-star-pic.svg" alt="//">
+                                </div>
+                            </div>
+                            <p class="slick-para-3 mb-0 fs-16 fw-normal color-black ">"As a fitness enthusiast, I was
+                                skeptical about
+                                resistance bands at first. But after trying these, I'm a believer. The quality is
+                                top-notch, and they've
+                                become an integral part of my workout routine. I can't believe how versatile they are.”
+                            </p>
+                        </div>
+                        <div class="slider-box mx-4 ">
+                            <div class="d-flex  flex-column">
+                                <div class="d-flex ">
+                                    <div class="slider-image">
+                                        <img src="./assets/image/slider-3pic.png" alt="image">
+                                    </div>
+                                    <div class="para-1 pl-20">
+                                        <h2 class="slick-box-heading color-black fs-16 fw-semibold mb-0 color">Mark T.</h2>
+                                        <p class="slick-box-text mb-0 fs-14 fw-normal color-black color">Fitness enthusiast
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="para-2 d-flex   gap-2">
+                                    <img class="w-50" src="./assets/image/svg/5-star-pic.svg" alt="//">
+                                </div>
+                            </div>
+                            <p class="slick-para-3 mb-0 fs-16 fw-normal color-black ">"As a fitness enthusiast, I was
+                                skeptical about
+                                resistance bands at first. But after trying these, I'm a believer. The quality is
+                                top-notch, and they've
+                                become an integral part of my workout routine. I can't believe how versatile they are.”
+                            </p>
+                        </div>
+                        <div class="slider-box mx-4 ">
+                            <div class="d-flex  flex-column">
+                                <div class="d-flex ">
+                                    <div class="slider-image">
+                                        <img src="./assets/image/slider-4pic.png" alt="image">
+                                    </div>
+                                    <div class="para-1 pl-20">
+                                        <h2 class="slick-box-heading color-black fs-16 fw-semibold mb-0 color">Mark T.</h2>
+                                        <p class="slick-box-text mb-0 fs-14 fw-normal color-black color">Fitness enthusiast
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="para-2 d-flex   gap-2">
+                                    <img class="w-50" src="./assets/image/svg/5-star-pic.svg" alt="//">
+                                </div>
+                            </div>
+                            <p class="slick-para-3 mb-0 fs-16 fw-normal color-black ">"As a fitness enthusiast, I was
+                                skeptical about
+                                resistance bands at first. But after trying these, I'm a believer. The quality is
+                                top-notch, and they've
+                                become an integral part of my workout routine. I can't believe how versatile they are.”
+                            </p>
+                        </div>
+                        <div class="slider-box mx-4 ">
+                            <div class="d-flex  flex-column">
+                                <div class="d-flex ">
+                                    <div class="slider-image">
+                                        <img src="./assets/image/slider-3pic.png" alt="image">
+                                    </div>
+                                    <div class="para-1 pl-20">
+                                        <h2 class="slick-box-heading color-black fs-16 fw-semibold mb-0 color ">Mark T.</h2>
+                                        <p class="slick-box-text mb-0 fs-14 fw-normal color-black color ">Fitness enthusiast
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="para-2 d-flex   gap-2">
+                                    <img class="w-50" src="./assets/image/svg/5-star-pic.svg" alt="//">
+                                </div>
+                            </div>
+                            <p class="slick-para-3 mb-0 fs-16 fw-normal color-black ">"As a fitness enthusiast, I was
+                                skeptical about
+                                resistance bands at first. But after trying these, I'm a believer. The quality is
+                                top-notch, and they've
+                                become an integral part of my workout routine. I can't believe how versatile they are.”
+                            </p>
+                        </div>
+                    </div>
+    
+                </div>
+    
+            </div>
+        </div>
+    </section>
+    <section class=" align-content-center">
+        <div class="container mt-5 mb-5">
             <div class="row justify-content-between">
                 <div class="col-12 col-lg-5">
                     <img class="w-100 img-1" src="/assets/image/img-5.png" alt="">
-                   </div>
+                </div>
                 <div class="col-12 col-lg-6 ">
                     <div class="heading">
                         How it works?
@@ -93,7 +571,199 @@
             </div>
         </div>
     </section>
-    <section class="min-vh-100">
+    <section class="d-flex align-items-center justify-content-center">
+    <div class="container w-1140">
+        <div class="row">
+        <div class="card-1  align-items-center overlay-color justify-content-center d-flex flex-column">
+    
+            <h1 class="card-heading primary-color plik Plus-Jakarta-font">Interested?</h1>
+            <h1 class="card-heading primary-color plik Plus-Jakarta-font mb-3">Get in touch with us</h1>
+            <p class="card-para primary-color Plus-Jakarta-font mb-4">Lörem ipsum koda astrobel: sutaveligen.
+                Rodod
+                bänera viliga. Pregigt primasofi dede facebooka: förutom tivaligt. </p>
+            <button class="card-btn Plus-Jakarta-font">Get a Quote</button>
+    
+        </div>
+    </div>
+    </div>
+    </section>
+    <section class="plus-jakarta-sans pb-5 pt-5">
+        <div class="container">
+            <div class=" d-flex flex-column align-items-center pb-5">
+                <h2 class="text-center fs-56 fw-semibold">Our Blog</h2>
+                <div class="max-width-592">
+                    <p class="text-center fs-18 fw-normal mb-0 text-black">Lörem ipsum koda astrobel: sutaveligen. Rodod
+                        bänera
+                        viliga.
+                        Pregigt primasofi dede
+                        facebooka: förutom
+                        tivaligt. Fejkade</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 col-12">
+                    <div class="p-4 custmor-card ">
+                        <div class="mb-4"><img class="w-100" src="./assets/image/kitchen-img.png" alt="kitchen">
+                        </div>
+                        <div class="pe-5 max-width-300">
+                            <h4 class="fs-24 fw-semibold mb-0">Lörem ipsum koda astrobel: sutaveligen. Rodod bänera
+                                viliga. </h4>
+                        </div>
+                        <div class="d-flex flex-row gap-4 pt-0 pt-lg-3">
+                            <p class="color-red cursor fs-16 fw-bold about-learn">Learn more</p>
+                            <span class="cursor"><svg width="26" height="12" viewBox="0 0 26 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M1 5.25C0.585786 5.25 0.25 5.58579 0.25 6C0.25 6.41421 0.585786 6.75 1 6.75V5.25ZM25.5303 6.53033C25.8232 6.23744 25.8232 5.76256 25.5303 5.46967L20.7574 0.696699C20.4645 0.403806 19.9896 0.403806 19.6967 0.696699C19.4038 0.989593 19.4038 1.46447 19.6967 1.75736L23.9393 6L19.6967 10.2426C19.4038 10.5355 19.4038 11.0104 19.6967 11.3033C19.9896 11.5962 20.4645 11.5962 20.7574 11.3033L25.5303 6.53033ZM1 6.75H25V5.25H1V6.75Z"
+                                        fill="#FF0000" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-12">
+                    <div class="p-4 custmor-card ">
+                        <div class="mb-4"><img class="w-100" src="./assets/image/kitchen-img.png" alt="kitchen">
+                        </div>
+                        <div class="pe-5 max-width-300">
+                            <h4 class="fs-24 fw-semibold mb-0">Lörem ipsum koda astrobel: sutaveligen. Rodod bänera
+                                viliga. </h4>
+                        </div>
+                        <div class="d-flex flex-row gap-4 pt-0 pt-lg-3">
+                            <p class="color-red cursor fs-16 fw-bold about-learn">Learn more</p>
+                            <span class="cursor"><svg width="26" height="12" viewBox="0 0 26 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M1 5.25C0.585786 5.25 0.25 5.58579 0.25 6C0.25 6.41421 0.585786 6.75 1 6.75V5.25ZM25.5303 6.53033C25.8232 6.23744 25.8232 5.76256 25.5303 5.46967L20.7574 0.696699C20.4645 0.403806 19.9896 0.403806 19.6967 0.696699C19.4038 0.989593 19.4038 1.46447 19.6967 1.75736L23.9393 6L19.6967 10.2426C19.4038 10.5355 19.4038 11.0104 19.6967 11.3033C19.9896 11.5962 20.4645 11.5962 20.7574 11.3033L25.5303 6.53033ZM1 6.75H25V5.25H1V6.75Z"
+                                        fill="#FF0000" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-12">
+                    <div class="p-4 custmor-card">
+                        <div class="mb-4"><img class="w-100" src="./assets/image/kitchen-img.png" alt="kitchen">
+                        </div>
+                        <div class="pe-5 max-width-300">
+                            <h4 class="fs-24 fw-semibold mb-0">Lörem ipsum koda astrobel: sutaveligen. Rodod bänera
+                                viliga. </h4>
+                        </div>
+                        <div class="d-flex flex-row gap-4 pt-0 pt-lg-3">
+                            <p class="color-red cursor fs-16 fw-bold about-learn">Learn more</p>
+                            <span class="cursor"><svg width="26" height="12" viewBox="0 0 26 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M1 5.25C0.585786 5.25 0.25 5.58579 0.25 6C0.25 6.41421 0.585786 6.75 1 6.75V5.25ZM25.5303 6.53033C25.8232 6.23744 25.8232 5.76256 25.5303 5.46967L20.7574 0.696699C20.4645 0.403806 19.9896 0.403806 19.6967 0.696699C19.4038 0.989593 19.4038 1.46447 19.6967 1.75736L23.9393 6L19.6967 10.2426C19.4038 10.5355 19.4038 11.0104 19.6967 11.3033C19.9896 11.5962 20.4645 11.5962 20.7574 11.3033L25.5303 6.53033ZM1 6.75H25V5.25H1V6.75Z"
+                                        fill="#FF0000" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container w-1140 mt-5 mb-5">
+        <div class="mb-56">
+            <h3 class="text-center fs-56 fw-semibold mb-4">Frequently Asked Questions</h3>
+            <div class="max-width-592 mx-auto ">
+                <p class="text-center fs-18 fw-normal">Lörem ipsum koda astrobel: sutaveligen. Rodod bänera viliga. Pregigt
+                    primasofi dede facebooka: förutom tivaligt. Fejkade</p>
+            </div>
+        </div>
+        <div>
+            <div class="accordion max-width-912 mx-auto accordion-flush" id="accordionFlushExampleone">
+                <div class="accordion-item border-0 mx-auto bg-white mb-3">
+                    <h2 class="accordion-header">
+                        <button
+                            class="accordion-button accordion-heading down-arrow collapsed gap-2  text-black bg-transparent fs-18 fw-normal"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse1" aria-expanded="false"
+                            aria-controls="flush-collapse1">
+                            Lörem ipsum koda astrobel: sutaveligen.
+                        </button>
+                    </h2>
+                    <div id="flush-collapse1" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExampleone">
+                        <div class="accordion-body text-black opacity-75 d-flex gap-2 fs-18 fw-normal">
+                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu est
+                                malesuada massa nec pharetra.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-0 mx-auto bg-blur mb-3">
+                    <h2 class="accordion-header">
+                        <button
+                            class="accordion-button accordion-heading down-arrow collapsed text-black bg-transparent gap-2 fs-18 fw-normal"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse2" aria-expanded="false"
+                            aria-controls="flush-collapse2">
+                            Rodod bänera viliga
+                        </button>
+                    </h2>
+                    <div id="flush-collapse2" class="accordion-collapse collapse text-black"
+                        data-bs-parent="#accordionFlushExampleone">
+                        <div class="accordion-body opacity-75 d-flex gap-2 fs-18 fw-normal">
+                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu est
+                                malesuada massa nec pharetra.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-0 mx-auto bg-blur mb-3">
+                    <h2 class="accordion-header">
+                        <button
+                            class="accordion-button accordion-heading down-arrow collapsed text-black bg-transparent gap-2 fs-18 fw-normal"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse3" aria-expanded="false"
+                            aria-controls="flush-collapse3">
+                            Pregigt primasofi dede facebooka: förutom
+                        </button>
+                    </h2>
+                    <div id="flush-collapse3" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExampleone">
+                        <div class="accordion-body text-black opacity-75 d-flex gap-2 fs-18 fw-normal">
+                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu est
+                                malesuada massa nec pharetra.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-0 mx-auto bg-blur mb-3">
+                    <h2 class="accordion-header">
+                        <button
+                            class="accordion-button accordion-heading down-arrow bg-transparent collapsed text-black gap-2 fs-18 fw-normal"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse4" aria-expanded="false"
+                            aria-controls="flush-collapse4">
+                            Ipsum koda astrobel: sutaveligen. Rodod bänera viliga.
+                        </button>
+                    </h2>
+                    <div id="flush-collapse4" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExampleone">
+                        <div class="accordion-body text-black opacity-75 d-flex gap-2 fs-18 fw-normal">
+                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu est
+                                malesuada massa nec pharetra.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-0 mx-auto bg-blur">
+                    <h2 class="accordion-header">
+                        <button
+                            class="accordion-button accordion-heading down-arrow bg-transparent collapsed text-black gap-2 fs-18 fw-normal"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse5" aria-expanded="false"
+                            aria-controls="flush-collapse5">
+                            Rodod bänera viliga. Pregigt primasofi dede facebooka
+                        </button>
+                    </h2>
+                    <div id="flush-collapse5" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExampleone">
+                        <div class="accordion-body text-black opacity-75 d-flex gap-22 fs-18 fw-normal">
+                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu est
+                                malesuada massa nec pharetra.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section>
         <div class="container">
             <div class="card-2">
                 <div class="heading">
@@ -439,8 +1109,6 @@
                 </div>
             </div>
         </div>
-        </div>
-        </div>
     </section>
     <footer>
         <div class="container">
@@ -550,52 +1218,62 @@
                 </div>
                 <div class="col-12 col-lg-8 d-flex">
                     <div class="row">
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                        <ul>
-                            <li class="top-heading">Links</li>
-                            <li class="text pt-2">home</li>
-                            <li class="text pt-2">about us</li>
-                            <li class="text pt-2">Services</li>
-                            <li class="text pt-2">Showcase</li>
-                        </ul>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                        <ul>
-                            <li class="top-heading">Legal</li>
-                            <li class="text pt-2">terms of use</li>
-                            <li class="text pt-2">privacy policy</li>
-                            <li class="text pt-2">cookie policy</li>
-                        </ul>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                        <ul>
-                            <li class="top-heading">Product</li>
-                            <li class="text pt-2">take tour</li>
-                            <li class="text pt-2">live chat</li>
-                            <li class="text pt-2">reveiws</li>
-                        </ul>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                        <ul>
-                            <li class="top-heading">Newsletter</li>
-                            <li class="text pt-2">Stay up to date</li>
-                            <div class=" d-flex box-2 mt-2">
-                            <input type="text" placeholder="Your email" class="mail border-0">
-                            <label class="btn-3">Subscribe</label>
-                            </div>
-                        </ul>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <ul>
+                                <li class="top-heading">Links</li>
+                                <li class="text pt-2">home</li>
+                                <li class="text pt-2">about us</li>
+                                <li class="text pt-2">Services</li>
+                                <li class="text pt-2">Showcase</li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <ul>
+                                <li class="top-heading">Legal</li>
+                                <li class="text pt-2">terms of use</li>
+                                <li class="text pt-2">privacy policy</li>
+                                <li class="text pt-2">cookie policy</li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <ul>
+                                <li class="top-heading">Product</li>
+                                <li class="text pt-2">take tour</li>
+                                <li class="text pt-2">live chat</li>
+                                <li class="text pt-2">reveiws</li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <ul>
+                                <li class="top-heading">Newsletter</li>
+                                <li class="text pt-2">Stay up to date</li>
+                                <div class=" d-flex box-5 mt-2">
+                                    <input type="text" placeholder="Your email" class="mail border-0">
+                                    <label class="btn-3">Subscribe</label>
+                                </div>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-            </div>
-        </div>
     </footer>
-    <div class="box-5">
+    <div class="box-6">
         Copyright 2024 ceramicsolutions.com all rights reserved
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script src="./assets/js/app.js"></script>
 </body>
 
 </html>
