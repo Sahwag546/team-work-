@@ -1,8 +1,7 @@
 $(".sliderbox").slick({
     dots: false,
     infinite: true,
-    speed: 3000,
-
+    speed: 2000,
     slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
@@ -18,7 +17,6 @@ $(".sliderbox").slick({
                 slidesToScroll: 1,
                 infinite: true,
                 dots: true,
-
             }
         },
         {
@@ -34,7 +32,7 @@ $(".sliderbox").slick({
             breakpoint: 768,
             settings: {
                 slidesToShow: 1,
-                slidesToScroll: 1
+                slidesToScroll: 1,
             }
         },
         {
