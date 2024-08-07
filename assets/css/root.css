@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :root {
     --fs-sm: 12px;
     --fs-md: 14px;
@@ -18,4 +19,38 @@
     --fc-light-gray: #D9D9D9;
     --fc-gray: #81848A;
     --fc-white: #fff;
+}
+:root{
+    --fs-sm:12px;
+    --fs-md:14px;
+    --fs-lg:16px;
+    --fs-xl:18px;
+    --fs-2xl:20px;
+    --fs-3xl:24px;
+    --fs-4xl:56px;
+    --fs-5xl:64px;
+}
+:root{
+    --fc-dark-gray:#1B2228;
+    --fc-red:#FF0000;
+    --fc-black:#000000;
+    --fc-light-pink:#FFEBEB;
+    --fc-light-red:#F7D3D4;
+    --fc-light-gray:#D9D9D9;
+    --fc-gray:#81848A;
+    --fc-white:#fff;
+}
+
+@media (max-width:992px) {
+    :root{
+        --fs-sm:10px;
+        --fs-md:12px;
+        --fs-lg:14px;
+        --fs-xl:16px;
+        --fs-2xl:18px;
+        --fs-3xl:22px;
+        --fs-4xl:48px;
+        --fs-5xl:58px;
+    }
+
 }
