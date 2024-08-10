@@ -186,6 +186,10 @@ section .container .sliderbox .slick-list::after {
     border: 1px solid var(--color-red);
 }
 
+.py-100 {
+    margin-right: 150px !important;
+}
+
 .get-btn:hover {
     background-color: var(--color-red) !important;
     color: var(--color-white);
@@ -210,7 +214,8 @@ section .container .sliderbox .slick-list::after {
     overflow: hidden;
     border-radius: 24px;
 }
-.bg-image::after{
+
+.bg-image::after {
     content: "";
     position: absolute;
     background-color: red;
@@ -218,8 +223,8 @@ section .container .sliderbox .slick-list::after {
     height: 100%;
     left: 0;
     opacity: 75%;
-    
-}   
+
+}
 
 .box {
     border-radius: 24px;
@@ -376,10 +381,6 @@ span {
     max-width: 820px;
 }
 
-.pt-72 {
-    padding-top: 72px;
-}
-
 .para-1 {
     font-family: "Plus Jakarta Sans", sans-serif;
     font-size: var(--fs-xl);
@@ -506,7 +507,7 @@ span {
 }
 
 
-@media (max-width:992px) {
+@media (max-width:1200px) {
     .nav-links {
         flex-direction: column;
         justify-content: center;
@@ -980,12 +981,16 @@ input[type="text"] {
     line-height: 25.6px;
     text-align: center;
     color: #1B2228;
-    border-top: 1px solid;
-
 }
 
-
-
+.line {
+    border-top: 1px solid;
+    max-width: 1440px;
+    height: 58px;
+    border: 1px 0px 0px 0px;
+    border-image-source: linear-gradient(90deg, rgba(22, 22, 22, 0) 0%, #696969 51.56%, rgba(22, 22, 22, 0) 100%);
+}
+    
 @media (max-width:992px) {
     .btn-1 {
         width: 100%;
@@ -1036,7 +1041,7 @@ input[type="text"] {
 
 .card-btn:hover {
     color: var(--fc-white);
-    background-color:var(--fc-red);
+    background-color: var(--fc-red);
     transition: all 300ms linear;
     border: 2px solid white;
 }
@@ -1051,6 +1056,7 @@ input[type="text"] {
     position: relative;
     z-index: 1;
 }
+
 .primary-color {
     color: white;
 }
@@ -1058,7 +1064,25 @@ input[type="text"] {
 .Plus-Jakarta-font {
     font-family: var(--jakarta-font);
 }
+
 /*============= responsive nav =======================*/
+@media (max-width:576px) {
+    input[type="text"] {
+        max-width: 30%;
+    }
+
+    .box-5 {
+        width: 290px;
+    }
+
+    .btn-3 {
+        margin-left: 40px;
+    }
+    .main-heading{
+        font-size:var(--fs-2xl)
+    }
+}
+
 @media (min-width:992px) {
     .pt-100 {
         padding-top: 170px;
