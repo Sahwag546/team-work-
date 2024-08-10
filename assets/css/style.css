@@ -902,12 +902,14 @@ span {
     font-size: 18px;
     font-weight: 700;
     line-height: 22.68px;
+    transition: all 500ms;
 }
 
 .btn-1:hover {
     color: red;
     background-color: #fff;
     border: 1px solid red;
+    transform: scale(1.1);
 }
 
 .bg-img {
@@ -1021,6 +1023,13 @@ input[type="text"] {
     line-height: 25.6px;
     text-align: center;
     color: #1B2228;
+}
+.para-6{
+    max-width: 500px;
+        height: 58px;
+        margin-top: 20px !important;
+        margin-bottom: 32px !important;
+      
 }
 
 .line {
